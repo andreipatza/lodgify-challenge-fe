@@ -39,7 +39,9 @@ The data for displaying the accordions and tasks are recived from the following 
 
 ## Further implementations
 
-If we want to not keep it simple, we could add a redux state management for storing the state or the accordions, we could create some actions for every change within the redux state and also for modal state ( we could create a modal globally and use it for multiple purposes, and display it using dispatch method ).
+If we want to not keep it simple, we could add a redux state management for storing the state or the accordions, we could create some actions for every change within the redux state and also for modal state ( we could create a modal globally and use it for multiple purposes, and display it using dispatch method ). This way provides us the opportunity to persist the inputs of the user in order to not lose it at every refresh.
+
+We can persist inputs of the user using local storage as well. 
 
 Also, we can use axios instead of the basic fetch.
 
