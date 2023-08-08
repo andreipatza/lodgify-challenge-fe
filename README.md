@@ -1,4 +1,5 @@
-https://github.com/andreipatza/lodgify-challenge-fe/assets/57939307/0fd19720-eb07-4326-81d3-641ddb897b32
+https://github.com/andreipatza/lodgify-challenge-fe/assets/57939307/69bf7b55-5388-4b92-b920-e20b4196bbe3
+
 
 # Lodgify - FE Technical Challenge
 
