@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Lodgify - FE Technical Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project represents a widget that shows the current progress of the profile creation of the user.
 
-## Available Scripts
+The user is able to see the missing tasks of a specific area and be able to mark them as done.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+In order to be able to start the project, first you need to install the dependencies using the following command:
 
-Runs the app in the development mode.\
+### `yarn install`
+
+After all dependencies are installed you can run the app using command:
+
+### `yarn start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+## Technical specifications
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For this project I've used React with TypeScript.
 
-### `npm run build`
+The chosed styling method was styled-components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I've created custom made ATOM components ( only modal is used from MUI )
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+All components are functional and they have their own purpose.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Components are reusable.
 
-### `npm run eject`
+The data for displaying the accordions and tasks are recived from the following API:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `https://gist.githubusercontent.com/huvber/ba0d534f68e34f1be86d7fe7eff92c96/raw/98a91477905ea518222a6d88dd8b475328a632d3/mock-progress`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Further implementations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If we want to not keep it simple, we could add a redux state management for storing the state or the accordions, we could create some actions for every change within the redux state and also for modal state ( we could create a modal globally and use it for multiple purposes, and display it using dispatch method ).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Also, we can use axios instead of the basic fetch.
 
-## Learn More
+This project has only the purpose to show my skills in a fast way.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The total time spent working for this project was 3 - 3.5h.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Thank you for your time!

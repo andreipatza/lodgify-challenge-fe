@@ -2,14 +2,11 @@ import React, { useEffect, useState } from "react";
 
 // STYLES
 import {
-  Button,
   ErrorMessage,
   Header,
   LoadingContainer,
   LoadingText,
-  ModalContainer,
   ModalTitle,
-  ModalWrapper,
   TaskListContainer,
   TaskTitle,
 } from "./TaskListStyle";
@@ -30,7 +27,8 @@ import useWindowSize from "../../hooks/useWindowSize";
 // COMPONENTS
 import Accordion from "../../components/Atoms/Accordion/Accordion";
 import ProgressBar from "../../components/Atoms/ProgressBar/ProgressBar";
-import { Modal } from "@mui/material";
+import Button from "../../components/Atoms/Button/Button";
+import ModalAtom from "../../components/Atoms/Modal/Modal";
 
 const TaskList = () => {
   // PROPS
@@ -97,7 +95,7 @@ const TaskList = () => {
         // Only purpose for applying a timeout is to show the loading component
         setTimeout(() => {
           setIsLoading(false);
-        }, 2000);
+        }, 1500);
       })
       .catch((error) => {
         setIsError(true);
@@ -165,9 +163,7 @@ const TaskList = () => {
     <TaskListContainer>
       {isLoading ? (
         <LoadingContainer>
-          <LoadingText>
-            We are preparing the content for you...
-          </LoadingText>
+          <LoadingText>We are preparing the content for you...</LoadingText>
           <CircularProgress />
         </LoadingContainer>
       ) : isError ? (
@@ -194,19 +190,13 @@ const TaskList = () => {
             <Confetti width={width} height={height} />
           )}
 
-          <Modal
+          <ModalAtom
             open={percentageData.percents === 100}
             onClose={() => window.location.reload()}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
           >
-            <ModalWrapper>
-              <ModalContainer>
-                <ModalTitle>You've successfully completed all tasks!</ModalTitle>
-                <Button onClick={() => window.location.reload()}>Restart</Button>
-              </ModalContainer>
-            </ModalWrapper >
-          </Modal>
+            <ModalTitle>You've successfully completed all tasks!</ModalTitle>
+            <Button onClick={() => window.location.reload()} text="Restart" />
+          </ModalAtom>
         </>
       )}
     </TaskListContainer>
