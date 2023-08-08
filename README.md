@@ -1,3 +1,5 @@
+https://github.com/andreipatza/lodgify-challenge-fe/assets/57939307/0fd19720-eb07-4326-81d3-641ddb897b32
+
 # Lodgify - FE Technical Challenge
 
 This project represents a widget that shows the current progress of the profile creation of the user.
